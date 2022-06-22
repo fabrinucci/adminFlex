@@ -1,0 +1,87 @@
+.no-menu {
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+
+.pagina {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    .nombre-sitio {
+        flex: 0 0 5rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        
+        @include desktop {
+            flex: 0 0 20rem;
+        }
+        background-color: $secundario;
+
+        h1 {
+            color: $blanco;
+        }
+
+        .escritorio {
+            display: none;
+            @include desktop {
+                display: block;
+            }
+        }
+        .movil {
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    background-color: $primario;
+
+    .menu-izquierdo {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        i {
+            color: $blanco;
+            font-size: 1.6rem;
+        }
+        .fa-arrow-right {
+            display: none;
+        }
+        
+    }
+    .menu-derecho {
+        display: flex;
+        .caja {
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            &:hover {
+                background-color: darken($primario, 5);
+            }
+            a {
+                span {
+                    background-color: $terciario;
+                    border-radius: 50%;
+                    padding: .5rem;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+}
+.contenedor-principal {
+    flex: 1;   
+}
